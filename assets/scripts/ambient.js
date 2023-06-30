@@ -57,18 +57,18 @@ function toggleTheme() {
 
 // https://stackoverflow.com/questions/18031410/javascript-if-time-is-between-7pm-and-7am-do-this
 function defaultTheme() { 
-	console.log('Welcome to the cool kids club i guess');
-	console.log('Enjoy some cool ascii art.');
-	console.log('');
-	console.log('');
-	console.log('██████╗░░█████╗░██╗░░██╗██╗███████╗██╗░░░██╗');
-	console.log('██╔══██╗██╔══██╗██║░██╔╝██║██╔════╝╚██╗░██╔╝');
-	console.log('██████╦╝███████║█████═╝░██║█████╗░░░╚████╔╝░');
-	console.log('██╔══██╗██╔══██║██╔═██╗░██║██╔══╝░░░░╚██╔╝░░');
-	console.log('██████╦╝██║░░██║██║░╚██╗██║██║░░░░░░░░██║░░░');
-	console.log('╚═════╝░╚═╝░░╚═╝╚═╝░░╚═╝╚═╝╚═╝░░░░░░░░╚═╝░░░');
-	console.log('Written by Makai Pindell');
-	console.log('');
+	console.log(`Welcome to the cool kids club i guess
+ Enjoy some cool ascii art.
+
+
+██████╗░░█████╗░██╗░░██╗██╗███████╗██╗░░░██╗
+██╔══██╗██╔══██╗██║░██╔╝██║██╔════╝╚██╗░██╔╝
+██████╦╝███████║█████═╝░██║█████╗░░░╚████╔╝░
+██╔══██╗██╔══██║██╔═██╗░██║██╔══╝░░░░╚██╔╝░░
+██████╦╝██║░░██║██║░╚██╗██║██║░░░░░░░░██║░░░
+╚═════╝░╚═╝░░╚═╝╚═╝░░╚═╝╚═╝╚═╝░░░░░░░░╚═╝░░░
+Written by Makai Pindell
+`);
 
 	const theme = document.getElementById('theme');
 	const hour = new Date().getHours();
@@ -84,16 +84,16 @@ function random(min, max) { // min and max included
 	return Math.floor(Math.random() * (max - min + 1) + min)
 }
 
-https://plainenglish.io/blog/how-to-copy-paste-text-into-clipboard-using-javascript
-document.addEventListener('DOMContentLoaded', function () {
+// https://plainenglish.io/blog/how-to-copy-paste-text-into-clipboard-using-javascript
+document.onload = () => {
 	let pasteButton = document.getElementById("paste");
-	pasteButton.addEventListener('click', function () {
+	pasteButton.onclick = () => {
 		navigator.clipboard
 			.readText()
 			.then(
-				cliptext =>
+				(cliptext) =>
 					(document.getElementById('text').innerText = cliptext),
-				err => console.log(err)
+				(err) => console.log(err);
 			);
 	})
 });
