@@ -13,6 +13,13 @@ Bakify allows users to scan for over 51 different analytical never-words with we
 
 ## Changelog
 
+### **Beta Version 1.6**
+
+- Light/Dark mode now changes automatically when the time changes.
+- Cookies added to store your light/dark mode preference.
+- Favicon fixed for tutorial.html.
+- <span style="color:red">**[BUG]**</span> The cookie request is still a placeholder.
+
 ### **Beta Version 1.5**
 
  - New dynamic suggestions system allows users to "recalculate" their suggestions.
